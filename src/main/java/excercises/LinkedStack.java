@@ -2,7 +2,7 @@ package excercises;
 
 public class LinkedStack<T> implements Stack<T>{
 
-    private class Entry<T>{
+    private static class Entry<T>{
 
         private T value;
         private Entry<T> prev;
