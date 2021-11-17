@@ -13,6 +13,9 @@ public class LinkedStack<T> implements Stack<T>{
         }
     }
 
+    private int size = 0;
+    private Entry<T> head;
+
     @Override
     public void push(T item) {
 
