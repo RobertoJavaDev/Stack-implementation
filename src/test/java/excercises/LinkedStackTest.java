@@ -39,12 +39,26 @@ class LinkedStackTest {
     }
 
     @Test
-    void size() {
+    void shouldPeekItems() {
         //given
+        Stack<String > stack = new LinkedStack<>();
+        stack.push("Warsaw");
+        stack.push("Madrid");
+        stack.push("London");
 
         //when
+        String peek1 = stack.peek();
+        int size1 = stack.size();
+        stack.pop();
+        stack.pop();
+        String peek2 = stack.peek();
+        stack.pop();
+        int size2 = stack.size();
 
         //then
-
+        assertThat(peek1).isEqualTo("London");
+        assertThat(size1).isEqualTo(3);
+        assertThat(peek2).isEqualTo("Warsaw");
+        assertThat(size2).isEqualTo(0);
     }
 }
