@@ -23,13 +23,19 @@ class LinkedStackTest {
     }
 
     @Test
-    void peek() {
+    void shouldPopItems() {
         //given
+        Stack<String > stack = new LinkedStack<>();
+        stack.push("Warsaw");
+        stack.push("Madrid");
+        stack.push("London");
 
         //when
+        String pop = stack.pop();
 
         //then
-
+        assertThat(pop).isEqualTo("London");
+        assertThat(stack.size()).isEqualTo(2);
     }
 
     @Test
